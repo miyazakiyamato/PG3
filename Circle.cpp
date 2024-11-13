@@ -5,7 +5,7 @@ Circle::Circle(float size){
 }
 
 void Circle::Size(){
-	printf("â~ÇÃÉTÉCÉYÇÕ%f\n", size_);
+	printf("â~ÇÃñ êœÇÕ%f\n", size_ * size_ * 3.14f);
 }
 
 void Circle::Draw(){

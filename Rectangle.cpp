@@ -5,7 +5,7 @@ Rectangle::Rectangle(float size){
 }
 
 void Rectangle::Size(){
-	printf("矩形のサイズは%f\n", size_);
+	printf("矩形の面積は%f\n", size_ * size_);
 }
 
 void Rectangle::Draw(){
