@@ -15,8 +15,8 @@ int main(){
 	int result;
 
 	result = a * n;
-	printf("ˆê”Ê“I‚È’À‹à‚Ì%dŠÔ•ª = %d\n", n, result);
+	printf("ä¸€èˆ¬çš„ãªè³ƒé‡‘ã®%dæ™‚é–“åˆ† = %d\n", n, result);
 	result = Recursive(n);
-	printf("Ä‹A“I‚È’À‹à‚Ì%dŠÔ•ª = %d\n", n, result);
+	printf("å†å¸°çš„ãªè³ƒé‡‘ã®%dæ™‚é–“åˆ† = %d\n", n, result);
 	return 0;
 }
