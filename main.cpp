@@ -9,14 +9,14 @@ int current = 1;
 
 void ThreadNum(int num) {
 	std::unique_lock<std::mutex> lock(mtx);
-	cv.wait(lock, [&]() { return current == num; }); // num ‚ªŒ»İ‚Ìƒ^[ƒ“‚Å‚ ‚é‚±‚Æ‚ğŠm”F
+	cv.wait(lock, [&]() { return current == num; }); // num ãŒç¾åœ¨ã®ã‚¿ãƒ¼ãƒ³ã§ã‚ã‚‹ã“ã¨ã‚’ç¢ºèª
 	printf("thread%d\n", num);
-	current++; // Ÿ‚Ìƒ^[ƒ“‚Éi‚Ş
-	cv.notify_all(); // ‘¼‚ÌƒXƒŒƒbƒh‚É’Ê’m
+	current++; // æ¬¡ã®ã‚¿ãƒ¼ãƒ³ã«é€²ã‚€
+	cv.notify_all(); // ä»–ã®ã‚¹ãƒ¬ãƒƒãƒ‰ã«é€šçŸ¥
 }
 
 int main(){
-	//ƒ}ƒ‹ƒ`ƒXƒŒƒbƒh
+	//ãƒãƒ«ãƒã‚¹ãƒ¬ãƒƒãƒ‰
 	std::thread th1(ThreadNum, 1);
 	std::thread th2(ThreadNum, 2);
 	std::thread th3(ThreadNum,3);
