@@ -13,7 +13,7 @@ char min<char>(char a, char b) {
         return a < b ? a : b;
     }
     else {
-        printf("%s\n", "”šˆÈŠO‚Í‘ã“üo—ˆ‚Ü‚¹‚ñ");
+        printf("%s\n", "æ•°å­—ä»¥å¤–ã¯ä»£å…¥å‡ºæ¥ã¾ã›ã‚“");
         return '\0';
     }
 }
