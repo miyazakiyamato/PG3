@@ -23,21 +23,21 @@ void Draw(std::list<const char*> yamanoteLine) {
 
 int main(){
 
-	//º˜a3”N‚Ì˜Hü}
+	//æ˜­å’Œ3å¹´ã®è·¯ç·šå›³
 	std::list<const char*> yamanoteLine{
 		 "Tokyo", "Kanda", "Akihabara", "Okachimachi", "Ueno","Uguisudani", "Nippori", "Tabata", "Komagome",
 		 "Sugamo","Otsuka", "Ikebukuro", "Mejiro", "Takadanobaba", "Shin-Okubo","Shinjuku", "Yoyogi", "Harajuku","Shibuya",
 		 "Ebisu","Meguro", "Gotanda", "Osaki", "Shinagawa", "Tamachi","Hamamatsucho", "Shimbashi", "Yurakucho"
 	};
-	printf("1970”N‚Ì˜Hü}\n");
+	printf("1970å¹´ã®è·¯ç·šå›³\n");
 	Draw(yamanoteLine);
-	//º˜a47”N‚Ì˜Hü}
+	//æ˜­å’Œ47å¹´ã®è·¯ç·šå›³
 	SetList(yamanoteLine, "Nishi-Nippori", "Tabata");
-	printf("2019”N‚Ì˜Hü}\n");
+	printf("2019å¹´ã®è·¯ç·šå›³\n");
 	Draw(yamanoteLine);
-	//º˜a47”N‚Ì˜Hü}
+	//æ˜­å’Œ47å¹´ã®è·¯ç·šå›³
 	SetList(yamanoteLine, "Takanawa Gateway", "Tamachi");
-	printf("2022”N‚Ì˜Hü}\n");
+	printf("2022å¹´ã®è·¯ç·šå›³\n");
 	Draw(yamanoteLine);
 
 	return 0;
