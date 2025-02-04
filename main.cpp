@@ -8,7 +8,7 @@ int main() {
 
     // コピーの時間計測
     std::chrono::steady_clock::time_point start_copy = std::chrono::high_resolution_clock::now();
-    std::string b = a;  // コピー
+    std::string b = a;   // コピー
     std::chrono::steady_clock::time_point end_copy = std::chrono::high_resolution_clock::now();
 
     // ムーブの時間計測
