@@ -3,26 +3,26 @@
 #include <chrono>
 
 int main() {
-    // 100000•¶š‚Ìstd::string‚ğ‰Šú‰»
+    // 100000æ–‡å­—ã®std::stringã‚’åˆæœŸåŒ–
     std::string a(100000, 'a');
 
-    // ƒRƒs[‚ÌŠÔŒv‘ª
+    // ã‚³ãƒ”ãƒ¼ã®æ™‚é–“è¨ˆæ¸¬
     std::chrono::steady_clock::time_point start_copy = std::chrono::high_resolution_clock::now();
-    std::string b = a;  // ƒRƒs[
+    std::string b = a;  // ã‚³ãƒ”ãƒ¼
     std::chrono::steady_clock::time_point end_copy = std::chrono::high_resolution_clock::now();
 
-    // ƒ€[ƒu‚ÌŠÔŒv‘ª
+    // ãƒ ãƒ¼ãƒ–ã®æ™‚é–“è¨ˆæ¸¬
     std::chrono::steady_clock::time_point start_move = std::chrono::high_resolution_clock::now();
-    std::string c = std::move(a);  // ƒ€[ƒu
+    std::string c = std::move(a);  // ãƒ ãƒ¼ãƒ–
     std::chrono::steady_clock::time_point end_move = std::chrono::high_resolution_clock::now();
 
-    // ŠÔŒvZ‚Æ•\¦iƒ}ƒCƒNƒ•bj
+    // æ™‚é–“è¨ˆç®—ã¨è¡¨ç¤ºï¼ˆãƒã‚¤ã‚¯ãƒ­ç§’ï¼‰
     int copy_time = std::chrono::duration_cast<std::chrono::microseconds>(end_copy - start_copy).count();
     int move_time = std::chrono::duration_cast<std::chrono::microseconds>(end_move - start_move).count();
 
-    printf("100,000•¶š‚ğˆÚ“®‚ÆƒRƒs[‚Å”äŠr‚µ‚Ü‚µ‚½B\n");
-    printf("ƒRƒs[ : %dƒÊs\n", copy_time);
-    printf("ˆÚ“® : %dƒÊs\n", move_time);
+    printf("100,000æ–‡å­—ã‚’ç§»å‹•ã¨ã‚³ãƒ”ãƒ¼ã§æ¯”è¼ƒã—ã¾ã—ãŸã€‚\n");
+    printf("ã‚³ãƒ”ãƒ¼ : %dÎ¼s\n", copy_time);
+    printf("ç§»å‹• : %dÎ¼s\n", move_time);
 
     return 0;
 }
