@@ -2,7 +2,6 @@
 #include "Cat.h"
 #include "Dog.h"
 
-
 int main(){
 	Animal* animal[2];
 
