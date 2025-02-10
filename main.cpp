@@ -25,6 +25,5 @@ int main(){
 		delete ishape[i];
 	}
 
-
 	return 0;
 }
