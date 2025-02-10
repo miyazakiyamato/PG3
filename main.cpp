@@ -36,7 +36,6 @@ int main(){
 	for (std::string& name : names) {
 		printf("%s\n", name.c_str());
 	}
-	
 
 	return 0;
 }
