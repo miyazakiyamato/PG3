@@ -22,11 +22,13 @@ int main(){
 	Math<float, float> b4(10.0f, 20.0f);
 	Math<float, double> b5(10.0f, 20.0);
 	Math<double, double> b6(10.0, 20.0);
+
 	printf("%d\n", b1.Min());
 	printf("%d\n", b2.Min());
 	printf("%d\n", b3.Min());
 	printf("%f\n", b4.Min());
 	printf("%f\n", b5.Min());
 	printf("%lf\n", b6.Min());
+	
 	return 0;
 }
