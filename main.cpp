@@ -1,42 +1,42 @@
 #include <stdio.h>
 #include <random>
 #include <Windows.h>
-//mac‚Æ‚©‚ÌUnixŒnOS‚Ìê‡
+//macã¨ã‹ã®Unixç³»OSã®å ´åˆ
 //#include <unistd.h>
 
 typedef void (*Pfunc)(int);
 
-//ƒR[ƒ‹ƒoƒbƒNŠÖ”
+//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 void DiceResult(int number) {
 	int randNum = 0;
 
 	std::random_device seed_gen;
 	std::default_random_engine engine(seed_gen());
-	// 1.0ˆÈã7.0–¢–‚Ì’l‚ğ“™Šm—¦‚Å”­¶‚³‚¹‚é
+	// 1.0ä»¥ä¸Š7.0æœªæº€ã®å€¤ã‚’ç­‰ç¢ºç‡ã§ç™ºç”Ÿã•ã›ã‚‹
 	std::uniform_real_distribution<> dist(1.0, 7.0);
 	
 	randNum = static_cast<int>(dist(engine));
 	printf("%d\n", randNum);
-	printf("\n‚ ‚È‚½‚ª‘I‚ñ‚¾‚Ì‚Í");
+	printf("\nã‚ãªãŸãŒé¸ã‚“ã ã®ã¯");
 	if (number % 2 == 1) {
-		printf("Šï”");
+		printf("å¥‡æ•°");
 	}
 	else {
-		printf("‹ô”");
+		printf("å¶æ•°");
 	}
-	printf("‚È‚Ì‚Å\n");
+	printf("ãªã®ã§\n");
 	if (randNum % 2 == number % 2) {
-		printf("³‰ğ!");
+		printf("æ­£è§£!");
 	}
 	else {
-		printf("•s³‰ğ!");
+		printf("ä¸æ­£è§£!");
 	}
 }
 
 void setTimeout(Pfunc p, int second,int number) {
-	//ƒR[ƒ‹ƒoƒbƒNŠÖ”
+	//ã‚³ãƒ¼ãƒ«ãƒãƒƒã‚¯é–¢æ•°
 	Sleep(second * 1000);
-	//mac‚Æ‚©‚ÌUnixŒnOS‚Ìê‡
+	//macã¨ã‹ã®Unixç³»OSã®å ´åˆ
 	//sleep(second);
 	p(number);
 }
@@ -49,13 +49,13 @@ int main(void){
 	
 	while (true)
 	{
-		printf("ƒTƒCƒRƒ‚ğU‚è‚Ü‚·BŠï”‚©‹ô”‚©“–‚Ä‚Ä‚İ‚Ä‚­‚¾‚³‚¢B\n1:Šï” 2:‹ô”\n");
+		printf("ã‚µã‚¤ã‚³ãƒ­ã‚’æŒ¯ã‚Šã¾ã™ã€‚å¥‡æ•°ã‹å¶æ•°ã‹å½“ã¦ã¦ã¿ã¦ãã ã•ã„ã€‚\n1:å¥‡æ•° 2:å¶æ•°\n");
 		scanf_s("%d", &number);
 
-		printf("ƒRƒƒRƒƒRƒ...\n");
+		printf("ã‚³ãƒ­ã‚³ãƒ­ã‚³ãƒ­...\n");
 		setTimeout(p, 3,number);
 
-		printf("\n\n‚à‚¤ˆê“x‚â‚è‚Ü‚·‚©H\n1:‚Í‚¢ 2:‚¢‚¢‚¦\n");
+		printf("\n\nã‚‚ã†ä¸€åº¦ã‚„ã‚Šã¾ã™ã‹ï¼Ÿ\n1:ã¯ã„ 2:ã„ã„ãˆ\n");
 		scanf_s("%d", &number);
 		if (number == 2) {
 			break;
